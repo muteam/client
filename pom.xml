@@ -45,12 +45,12 @@
         </plugins>
     </build>
 
-    <!--<profiles>-->
-        <!--<profile>-->
-            <!--<id>openshift</id>-->
-            <!--<build>-->
+    <profiles>
+        <profile>
+            <id>openshift</id>
+            <build>
                 <!--<finalName>client</finalName>-->
-                <!--<plugins>-->
+                <plugins>
                     <!--<plugin>-->
                         <!--<artifactId>maven-war-plugin</artifactId>-->
                         <!--<version>2.1.1</version>-->
@@ -59,15 +59,15 @@
                             <!--<warName>ROOT</warName>-->
                         <!--</configuration>-->
                     <!--</plugin>-->
-                    <!--<plugin>-->
-                        <!--<groupId>org.wildfly.plugins</groupId>-->
-                        <!--<artifactId>wildfly-maven-plugin</artifactId>-->
-                        <!--<version>1.0.2.Final</version>-->
-                    <!--</plugin>-->
-                <!--</plugins>-->
-            <!--</build>-->
-        <!--</profile>-->
-    <!--</profiles>-->
+                    <plugin>
+                        <groupId>org.wildfly.plugins</groupId>
+                        <artifactId>wildfly-maven-plugin</artifactId>
+                        <version>1.0.2.Final</version>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
 
     <repositories>
         <repository>
