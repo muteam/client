@@ -11,8 +11,8 @@
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
-        <!--<maven.compiler.source>1.8</maven.compiler.source>-->
-        <!--<maven.compiler.target>1.8</maven.compiler.target>-->
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -64,14 +64,14 @@
         </profile>
     </profiles>
 
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>v4.tahvonen.fi</id>-->
-            <!--<url>http://v4.tahvonen.fi/maven2</url>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-    <!--</repositories>-->
+    <repositories>
+        <repository>
+            <id>v4.tahvonen.fi</id>
+            <url>http://v4.tahvonen.fi/maven2</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 
 </project>
