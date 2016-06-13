@@ -51,14 +51,14 @@
             <build>
                 <finalName>client</finalName>
                 <plugins>
-                    <!--<plugin>-->
-                        <!--<artifactId>maven-war-plugin</artifactId>-->
-                        <!--<version>2.1.1</version>-->
-                        <!--<configuration>-->
-                            <!--<outputDirectory>webapps</outputDirectory>-->
-                            <!--<warName>ROOT</warName>-->
-                        <!--</configuration>-->
-                    <!--</plugin>-->
+                    <plugin>
+                        <artifactId>maven-war-plugin</artifactId>
+                        <version>2.1.1</version>
+                        <configuration>
+                            <outputDirectory>webapps</outputDirectory>
+                            <warName>ROOT</warName>
+                        </configuration>
+                    </plugin>
                     <plugin>
                         <groupId>org.wildfly.plugins</groupId>
                         <artifactId>wildfly-maven-plugin</artifactId>
