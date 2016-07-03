@@ -64,7 +64,7 @@ public class VaadinUI extends UI {
                     table.setCaption(finishedEvent.getFilename());
                     table.setContainerDataSource(indexedContainer);
                     table.setVisible(true);
-                    table.setEditable(true);
+//                    table.setEditable(true);
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
