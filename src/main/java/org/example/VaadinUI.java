@@ -80,9 +80,11 @@ public class VaadinUI extends UI {
         table.addItemClickListener(new ItemClickEvent.ItemClickListener() {
             @Override
             public void itemClick(ItemClickEvent event) {
-                String selectedColumnId = (String) event.getPropertyId();
-                table.setColumnWidth(selectedColumnId, 777);
-                System.out.println("Item clicked: " + selectedColumnId);
+                if (event.isDoubleClick())    {
+                    Item item = (Item) event.getItemId();
+                    Window window = new Window(item);
+                    window.setVisible(true);
+                }
             }
         });
     }
