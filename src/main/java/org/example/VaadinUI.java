@@ -4,6 +4,7 @@ import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.data.Item;
 import com.vaadin.data.util.IndexedContainer;
+import com.vaadin.event.ItemClickEvent;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.*;
 import au.com.bytecode.opencsv.CSVReader;
@@ -76,6 +77,13 @@ public class VaadinUI extends UI {
     /* Table to show the contents of the file */
         table = new Table();
         table.setVisible(false);
+        table.addItemClickListener(new ItemClickEvent.ItemClickListener() {
+            @Override
+            public void itemClick(ItemClickEvent event) {
+                String selectedColumnId = (String) event.getPropertyId();
+                table.setColumnWidth(selectedColumnId, 777);
+            }
+        });
     }
 
     private VerticalLayout createLayout(Upload upload) {
