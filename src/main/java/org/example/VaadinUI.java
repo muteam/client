@@ -3,18 +3,11 @@ package org.example;
 import com.vaadin.annotations.Theme;
 import com.vaadin.cdi.CDIUI;
 import com.vaadin.data.Item;
-import com.vaadin.data.Property;
 import com.vaadin.data.util.IndexedContainer;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.*;
 import au.com.bytecode.opencsv.CSVReader;
-import javax.inject.Inject;
 
-import com.vaadin.ui.Window;
-import org.vaadin.viritin.label.Header;
-import org.vaadin.viritin.layouts.MVerticalLayout;
-
-import java.awt.*;
 import java.io.*;
 
 /**
@@ -30,6 +23,13 @@ public class VaadinUI extends UI {
 
     @Override
     public void init(VaadinRequest request) {
+        Upload upload = createUpload();
+        initTable();
+        VerticalLayout layout = createLayout(upload);
+        setContent(layout);
+    }
+
+    private Upload createUpload() {
     /* Create and configure the upload component */
         Upload upload = new Upload("Upload CSV File", new Upload.Receiver() {
             @Override
@@ -69,21 +69,23 @@ public class VaadinUI extends UI {
                 }
             }
         });
+        return upload;
+    }
 
+    private void initTable() {
     /* Table to show the contents of the file */
         table = new Table();
         table.setVisible(false);
+    }
 
+    private VerticalLayout createLayout(Upload upload) {
     /* Main layout */
         VerticalLayout layout = new VerticalLayout();
         layout.setMargin(true);
         layout.setSpacing(true);
         layout.addComponent(table);
         layout.addComponent(upload);
-
-    /* Build the main window */
-        //Window w = new Window("CSV Upload Demo");
-        setContent(layout);
+        return layout;
     }
 
 
