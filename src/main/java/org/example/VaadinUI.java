@@ -82,7 +82,7 @@ public class VaadinUI extends UI {
             public void itemClick(ItemClickEvent event) {
                 if (event.isDoubleClick())    {
                     Item item = (Item) event.getItemId();
-                    Window window = new Window(item);
+                    Window window = new Window();
                     window.setVisible(true);
                 }
             }
