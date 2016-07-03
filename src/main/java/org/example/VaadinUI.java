@@ -24,10 +24,10 @@ public class VaadinUI extends UI {
 
     @Override
     public void init(VaadinRequest request) {
-        Upload upload = createUpload();
-        initTable();
-        VerticalLayout layout = createLayout(upload);
-        setContent(layout);
+//        Upload upload = createUpload();
+//        initTable();
+//        VerticalLayout layout = createLayout(upload);
+//        setContent(layout);
     }
 
     private Upload createUpload() {
