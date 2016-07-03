@@ -82,6 +82,7 @@ public class VaadinUI extends UI {
             public void itemClick(ItemClickEvent event) {
                 String selectedColumnId = (String) event.getPropertyId();
                 table.setColumnWidth(selectedColumnId, 777);
+                System.out.println("Item clicked: " + selectedColumnId);
             }
         });
     }
